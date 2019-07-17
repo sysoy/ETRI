@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hyperledger Fabric Reference by SY</title>
+    <style>
+      h2 {color : #0000FF;}
+      h3 {color : #0080FF;}
+    </style>
+  </head>
+  <body>
+    <h1>About Hyperledger Fabric & IBM Blockchain Platform(IBP)</h1>
+
+    <h2>Hyperledger Fabric</h2>
+      <h3>What is Hyperledger ?</h3>
+        <p>리눅스 재단에서 주관하는 블록체인 <strong>오픈소스 프로젝트</strong>로, <br>
+          금융, IoT, 물류, 제조, 기술 산업 등 여러 산업에 걸쳐 응용 가능한 블록체인 기술을 만드는 것이 목표로 합니다. <br>
+          하이퍼레저 이외에도 R3, Ripple, Ethereum 등 다른 블록체인 플랫폼도 있지만 이 중 하이퍼레저가 특별한 이유는, <br>
+          1) 프라이빗 블록체인 플랫폼으로서 기업 비즈니스를 구현하기에 적합한 환경이라는 점, <br>
+          2) 특정 비즈니스 모델에 특화된 타 플랫폼과 달리 여러 산업에 범용적으로 도입 가능한 기술 표준을 제시한다는 점입니다.  </p>
+
+      <h3>What is Hyperledger Fabric ?</h3>
+        <p>하이퍼레저 패브릭은 모듈러 아키텍쳐를 이용한 어플리케이션/솔루션 개발을 가능케 하는 파운데이션으로서, <br>
+          컨센서스나 멤버십 서비스 등 핵심 기술 요소들이 <strong>plug-and-play 방식</strong>으로 구현될 수 있도록 합니다. <br>
+          사실상 ‘하이퍼레저’ 라고 명명할 때에는 하이퍼레저 패브릭을 의미하는 경우가 많을 정도로, <br>
+          하이퍼레저 프로젝트 전체의 핵심이 되는 부분입니다. </p>
+
+      <h3>Hyperledger Fabric - Cost</h3>
+      <p><strong>There is no fee for the software itself</strong> as you get it from hyperledger.org and our github repos, etc <br>
+        - it's all under the Apache license, which you should get familiar with but is fundamentally very friendly.  <br>
+        There of course may be fees to use it on someone's cloud, <br>
+        or it can be incorporated into commercial products and services.</p>
+
+      <h3>Hyperledger Fabric - Setting up the development environment</h3>
+        <h4> Window -> Virtual Box(Ubuntu) -> Docker -> Hyperledger Fabric</h4>
+        <h4> (Hyperledger Fabric 는 Docker 이미지로 배포됨)</h4>
+        <ol>
+          <strong><li>Virtual Box 설치</li></strong>
+              <ul>
+                <li><a href="https://www.virtualbox.org/wiki/Downloads"
+                  target="_blank">Virtual Box download link</a></li>
+              </ul>
+          <strong><li>Ubuntu 설치</li></strong>
+              <ul>
+                <li><a href="https://ubuntu.com/download/desktop"
+                  target="_blank">Ubuntu download link</a></li>
+              </ul>
+          <strong><li>curl, docker, docker-compose, go, python, git, nodejs, n, npm 설치</li></strong>
+              <ul>
+                <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/prereqs.html"
+                  target="_blank" title="하이퍼레저 패브릭 개발 환경 Prerequisites">[공식사이트]Getting Started-Prerequisites(for V2.0)</a> </li>
+                <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/dev-setup/devenv.html"
+                  target="_blank" title="하이퍼레저 패브릭 개발 환경 설정">[공식사이트]Setting up the development environmen(for V2.0)</a> </li>
+                <li><a href="https://steemit.com/kr/@cillic/hyperledger-fabric-1"
+                  target="_blank" title="하이퍼레저 패브릭 개발 환경 설정">[steemit]Setting up the development environment(for V1.0)</a> </li>
+              </ul>
+          <strong><li>Install Samples, Binaries and Docker Images</li></strong>
+            <ol>
+                <li>Clone the fabric-samples repository</li>
+                &nbsp;&nbsp; 명령어 :   curl -sSL http://bit.ly/2ysbOFE | bash -s
+                &nbsp;<li>Checkout Version</li>
+                &nbsp;&nbsp; 명령어 :   git checkout v1.1.0
+                &nbsp;&nbsp; 명령어 :   git branch
+                &nbsp;<li>Install the Hyperledger Fabric platform-specific binaries and config files <br>
+                  for the version specified into the /bin and /config directories of fabric-samples</li>
+                <li>Download the Hyperledger Fabric <strong>docker images</strong> for the version specified</li>
+                &nbsp;&nbsp; 명령어 :  sudo curl -sSL https://goo.gl/6wtTN5 | sudo bash -s 1.1.0
+            </ol>
+            <ul>
+                <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/install.html#"
+                  target="_blank">[공식사이트]Getting Started-Install Samples, Binaries and Docker Images(for V2.0)</a></li>
+            </ul>
+            <strong><li> Hyperledger Fabric SDK</li></strong>
+            Hyperledger Fabric offers a number of SDKs to support various programming languages. There are two officially released SDKs for Node.js and Java: <br>
+                &nbsp; &nbsp; &nbsp;Hyperledger Fabric <strong>Node SDK</strong> and Node SDK documentation.<br>
+                &nbsp; &nbsp; &nbsp;Hyperledger Fabric <strong>Java SDK.</strong> <br>
+            In addition, there are three more SDKs that have not yet been officially released (for Python, Go and REST), <br>
+            but they are still available for downloading and testing: <br>
+                &nbsp; &nbsp; &nbsp;Hyperledger Fabric <strong>Python SDK</strong>. <br>
+                &nbsp; &nbsp; &nbsp;Hyperledger Fabric <strong>Go SDK.</strong> <br>
+                &nbsp; &nbsp; &nbsp;Hyperledger Fabric <strong>REST SDK.</strong>
+                <ul>
+                    <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/getting_started.html#hyperledger-fabric-sdks#"
+                      target="_blank">[공식사이트]Getting Started-Hyperledger Fabric SDK download</a></li>
+                </ul>
+            <strong><li> Hyperledger Fabric CA</li></strong>
+              Hyperledger Fabric provides an optional certificate authority service <br>
+              that you may choose to use to generate the certificates and key material <br>
+              to configure and manage identity in your blockchain network. <br>
+              However, <strong>any CA that can generate ECDSA certificates may be used.</strong>
+        </ol>
+
+
+        <h3>Hyperledger Fabric - Building Network</h3>
+        <ul>
+          <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/build_network.html"
+            target="_blank" title="하이퍼레저 패브릭 네트워크 설정">[공식사이트]Hyperledger Fabric_example-Building Network </a> </li>
+        </ul>
+        <ol>
+          <li>Generate Network Artifacts</li>
+          &nbsp; 명령어 :   ./byfn.sh generate
+          <li>Bring Up the Network</li>
+          &nbsp; 명령어 :   ./byfn.sh up
+        </ol>
+
+      <h3>Hyperledger Fabric - Chain Code</h3>
+
+      <h3>Hyperledger Fabric - Development tool</h3>
+      <ul>
+        <li>Hyperledger Composer</li>
+          <img width = 1000 src="arch-blockchain-network1.png">
+          <ol>
+            <li>Hyperledger Composer 개발 툴을 설치합니다.</li>
+            <li>Hyperledger Fabric을 시작합니다.</li>
+            <li>BNA(Business Network Archive)파일을 생성합니다.</li>
+            <li>컴포저 플레이그라운드를 사용해서 BNA (Business Network Archive)를 배포합니다.</li>
+            <li>(대체 방안Alternative method) 로컬의 하이퍼레저 컴포저에 BNA를 배포합니다.</li>
+          </ol>
+          <p> 2018년 11월 <strong>IBM은 하이퍼레저 컴포저 개발에 참여하지 않겠다</strong>는 의사를 밝혔다. <br>
+              그에 따른 가장 큰 이유는 컴포저와 패브릭의 시너지가 미비함에 따른 것을 추축된다.<br>
+              하이퍼레저 패브릭은 프라이빗 네트워크를 구축할 수 있도록 네트워크 접근을 제어하는 퍼미션(Permission)형으로 <br>
+              다양한 솔루션에 적용 가능한 모듈형이다. 그에 반해 컴포저는 다른 레벨과 API가 사용되기 때문에 패브릭과 결합되지 않아 <br>
+              개발자들에게 비효율적인 상황이 되었다. 이러한 점을 바탕으로 IBM은 기존에 컴포저에 투입됐던 리소스를 <br>
+              패브릭에 집중 투입하기로 뜻을 모은 것으로 보인다.</p>
+        <li>IBM Blockchain Plarform</li>
+      </ul>
+
+    <h2>IBM Blockchain Platform(IBP)</h2>
+      <h3>Relationship between IBP and Hyperledger Fabric </h3>
+      <img width = 1000 src="IBP-Diagram.svg">
+        <p>
+          Hyperledger Fabric is a formal Linux Foundation project which IBM and other organisations are members of. <br>
+          Community members contribute Apache licensed source code, ideas and functional direction via working groups etc.<br>
+          <strong>Members such as IBM can then take the Fabric (and other Hyperledger projects) source code and use it <br>
+          in delivering their own specific commercial blockchain-based infrastructure services</strong> <br>
+          and/or work with clients to develop specific applications using Fabric as a foundation for distributed ledgers. <br>
+        </p>
+
+        <p>IBM provides its‘ IBM blockchain platform, which is based on Hyperledger Fabric.<br>
+            You can review their pricing details, <br>
+            which includes a starter plan and an Enterprise plan.</p>
+      <h3>IBP - IBM Cloud</h3>
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HmzBeIUjMDM" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+
+    <h3>IBP - Cost</h3>
+      <a href="https://www.devteam.space/blog/how-much-does-it-cost-to-build-a-blockchain-project/" target="_blank" title="cost ">cost polocy</a>
+
+    <h2>Main reference page</h2>
+      <ul>
+        <li><a href="https://cloud.ibm.com/docs/services/blockchain?topic=blockchain-get-started-ibp"
+          target="_blank" title="IBM Cloud">
+          IBM Blockchain Platform</a></li>
+        <li><a href="https://developer.ibm.com/technologies/blockchain/"
+          target="_blank" title="Start developing with the open source Hyperledger Fabric and IBM Blockchain.">
+          IBM Developer</a></li>
+        <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/"
+          target="_blank">Hyperledger Fabric</a></li>
+      </ul>
+    <p>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://hyperledger-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </p>
+
+    <p>
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5d2825859b94cd38bbe6f36d/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+    </p>
+
+
+    <input type="checkbox">
+  </body>
+</html>
