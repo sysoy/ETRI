@@ -13,20 +13,23 @@
 
     <h2>Hyperledger Fabric</h2>
       <h3>What is Hyperledger ?</h3>
-        <p>리눅스 재단에서 주관하는 블록체인 <strong>오픈소스 프로젝트</strong>로, <br>
-          금융, IoT, 물류, 제조, 기술 산업 등 여러 산업에 걸쳐 응용 가능한 블록체인 기술을 만드는 것이 목표로 합니다. <br>
+        <p>Hyperledger is an <strong>open source</strong> collaborative effort created to advance cross-industry blockchain technologies. <br>
+          It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, IoT, supply chain, manufacturing and technology. <br>
+          <br>
           하이퍼레저 이외에도 R3, Ripple, Ethereum 등 다른 블록체인 플랫폼도 있지만 이 중 하이퍼레저가 특별한 이유는, <br>
           1) 프라이빗 블록체인 플랫폼으로서 기업 비즈니스를 구현하기에 적합한 환경이라는 점, <br>
           2) 특정 비즈니스 모델에 특화된 타 플랫폼과 달리 여러 산업에 범용적으로 도입 가능한 기술 표준을 제시한다는 점입니다.  </p>
 
       <h3>What is Hyperledger Fabric ?</h3>
-        <p>하이퍼레저 패브릭은 모듈러 아키텍쳐를 이용한 어플리케이션/솔루션 개발을 가능케 하는 파운데이션으로서, <br>
-          컨센서스나 멤버십 서비스 등 핵심 기술 요소들이 <strong>plug-and-play 방식</strong>으로 구현될 수 있도록 합니다. <br>
-          사실상 ‘하이퍼레저’ 라고 명명할 때에는 하이퍼레저 패브릭을 의미하는 경우가 많을 정도로, <br>
-          하이퍼레저 프로젝트 전체의 핵심이 되는 부분입니다. </p>
+        <p>Hyperledger Fabric is a blockchain framework implementation and one of the Hyperledger projects hosted by The Linux Foundation. <br>
+          Intended as a foundation for developing applications or solutions with a modular architecture, <br>
+          Hyperledger Fabric allows components, such as consensus and membership services, to be <strong>plug-and-play.</strong> <br>
+          Hyperledger Fabric leverages container technology to host smart contracts called “chaincode” that comprise the application logic of the system. <br>
+          Hyperledger Fabric was initially contributed by Digital Asset and IBM, as a result of the first hackathon.</p>
 
       <h3>Hyperledger Fabric - Cost</h3>
-      <p><strong>There is no fee for the software itself</strong> as you get it from hyperledger.org and our github repos, etc <br>
+      <p><strong>There is no fee for the software itself</strong> as you get it from
+        <a href="https://www.hyperledger.org/projects/fabric" target="_blank" title="Hyperledger Fabric homepage">hyperledger.org</a> and our github repos, etc <br>
         - it's all under the Apache license, which you should get familiar with but is fundamentally very friendly.  <br>
         There of course may be fees to use it on someone's cloud, <br>
         or it can be incorporated into commercial products and services.</p>
@@ -91,8 +94,10 @@
         </ol>
 
 
-        <h3>Hyperledger Fabric - Building Network</h3>
+        <h3>Hyperledger Fabric - Example, Building Network</h3>
         <ul>
+          <li><a href="https://github.com/hyperledger/fabric-samples"
+            target="_blank" title="하이퍼레저 패브릭 예제 다운로드">[공식사이트]Hyperledger Fabric_example download link </a> </li>
           <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/build_network.html"
             target="_blank" title="하이퍼레저 패브릭 네트워크 설정">[공식사이트]Hyperledger Fabric_example-Building Network </a> </li>
         </ul>
@@ -101,13 +106,24 @@
           &nbsp; 명령어 :   ./byfn.sh generate
           <li>Bring Up the Network</li>
           &nbsp; 명령어 :   ./byfn.sh up
+          <li>Bring Down the Network</li>
+          &nbsp; 명령어 :   ./byfn.sh down
         </ol>
 
       <h3>Hyperledger Fabric - Chain Code</h3>
+      <ul>
+        <li><a href="https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode" target="_blank" title="API for the chaincode">Chaincode API for GO</a></li>
+        <li><a href="https://fabric-sdk-node.github.io/release-1.4/index.html#toc1__anchor" target="_blank">Chaincode API for Node.js</a></li>
+      </ul>
+
+
 
       <h3>Hyperledger Fabric - Development tool</h3>
       <ul>
         <li>Hyperledger Composer</li>
+        <ul>
+          <li><a href="https://developer.ibm.com/kr/journey/build-a-blockchain-network/" target="_blank" title="cost ">[IBM Developer]하이퍼레저 컴포저 블록체인 네트워크 구축</a></li>
+        </ul>
           <img width = 1000 src="arch-blockchain-network1.png">
           <ol>
             <li>Hyperledger Composer 개발 툴을 설치합니다.</li>
@@ -116,6 +132,7 @@
             <li>컴포저 플레이그라운드를 사용해서 BNA (Business Network Archive)를 배포합니다.</li>
             <li>(대체 방안Alternative method) 로컬의 하이퍼레저 컴포저에 BNA를 배포합니다.</li>
           </ol>
+
           <p> 2018년 11월 <strong>IBM은 하이퍼레저 컴포저 개발에 참여하지 않겠다</strong>는 의사를 밝혔다. <br>
               그에 따른 가장 큰 이유는 컴포저와 패브릭의 시너지가 미비함에 따른 것을 추축된다.<br>
               하이퍼레저 패브릭은 프라이빗 네트워크를 구축할 수 있도록 네트워크 접근을 제어하는 퍼미션(Permission)형으로 <br>
@@ -139,25 +156,33 @@
         <p>IBM provides its‘ IBM blockchain platform, which is based on Hyperledger Fabric.<br>
             You can review their pricing details, <br>
             which includes a starter plan and an Enterprise plan.</p>
-      <h3>IBP - IBM Cloud</h3>
+
+      <h3>IBP - Setting up the development environment</h3>
+
+      <h3>IBP - Tutorial overview using IBM Cloud</h3>
         <p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/HmzBeIUjMDM" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
 
+    <h3>IBP - APIs</h3>
+
+    <a href="https://cloud.ibm.com/apidocs/blockchain" target="_blank"> IBP APIs</a>
     <h3>IBP - Cost</h3>
       <a href="https://www.devteam.space/blog/how-much-does-it-cost-to-build-a-blockchain-project/" target="_blank" title="cost ">cost polocy</a>
 
     <h2>Main reference page</h2>
       <ul>
         <li><a href="https://cloud.ibm.com/docs/services/blockchain?topic=blockchain-get-started-ibp"
-          target="_blank" title="IBM Cloud">
-          IBM Blockchain Platform</a></li>
+          target="_blank" title="IBM Cloud">IBM Blockchain Platform</a></li>
         <li><a href="https://developer.ibm.com/technologies/blockchain/"
           target="_blank" title="Start developing with the open source Hyperledger Fabric and IBM Blockchain.">
           IBM Developer</a></li>
+        <li><a href="https://developer.ibm.com/kr/blockchain/"
+          target="_blank">IBM Developer Blockchain</a></li>
         <li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/"
           target="_blank">Hyperledger Fabric</a></li>
+
       </ul>
     <p>
       <div id="disqus_thread"></div>
