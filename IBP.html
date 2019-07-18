@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hyperledger Fabric Reference by SY</title>
+    <style>
+      h2 {color : #0000FF;}
+      h3 {color : #0080FF;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Hyperledger Fabric & IBM Blockchain Platform(IBP)</a></h1>
+    <ul>
+      <li><h2><a href="HyperledgerFabric.html">Hyperledger Fabric</a></h2></li>
+      <li><h2><a href="IBP.html">IBM Blockchain Platform(IBP)</a></h2></li>
+    </ul>
+
+    <h2>IBM Blockchain Platform(IBP)</h2>
+
+
+      <h3>Relationship between IBP and Hyperledger Fabric </h3>
+        <h5>IBM provides its‘ IBM blockchain platform, which is based on Hyperledger Fabric.</h5>
+
+        <img width = 1000 src="IBP-Diagram.svg">
+          <p>
+            Hyperledger Fabric is a formal Linux Foundation project which IBM and other organisations are members of. <br>
+            Community members contribute Apache licensed source code, ideas and functional direction via working groups etc.<br>
+            <strong>Members such as IBM can then take the Fabric (and other Hyperledger projects) source code and use it <br>
+            in delivering their own specific commercial blockchain-based infrastructure services</strong> <br>
+            and/or work with clients to develop specific applications using Fabric as a foundation for distributed ledgers. <br>
+          </p>
+
+
+      <h3>IBP Type & Cost</h3>
+      <p> IBM® Blockchain Platform은 사용자가 직접 선택한 환경에서 블록체인 컴포넌트를 배치할 수 있는 관리되는 전체 스택의 BaaS(blockchain-as-a-service) 오퍼링을 제공합니다. <br>
+          환경은 IBM Cloud, IBM Cloud Private을 통한 온프레미스, AWS(Amazon Web Services) 등의 서드파티일 수 있습니다. </p>
+          <ul>
+              <li><strong>Cloud 사용 비용</strong></li>
+                <ul>
+                  <strong><li>IBP for VS Code</strong> - Free</li>
+                  <strong><li>IBP for IBM Cloud</strong> - <a href="https://cloud.ibm.com/docs/services/blockchain/howto?topic=blockchain-ibp-saas-pricing&locale=ko" target="_blank" title="IBM Cloud 비용"> 청구정책</a></li>
+                  <strong><li>IBP for MultiCloud</strong> - <a href="https://cloud.ibm.com/docs/services/blockchain/howto?topic=blockchain-ibp-software-pricing&locale=ko"  title=" MultiCloud비용" target="_blank"> 청구정책</a></li>
+                  <strong><li>IBP for AWS</strong> - <a href="https://aws.amazon.com/ko/managed-blockchain/pricing/"  title="AWS 비용" target="_blank"> 청구정책</a></li>
+                </ul>
+              <li><strong>개발 비용</strong></li>
+                <ul>
+                  <li>An experienced Hyperledger developer can cost you upwards of $700 per day.</li>
+                </ul>
+              <li><strong>Starter plan & Enterprise plan 비용</strong></li>
+                <ul>
+                  <li>  <a href="https://cloud.ibm.com/docs/services/blockchain?topic=blockchain-ibp-pricing&locale=ko" target="_blank" >[공식사이트] 스타터/엔터프라이즈 비용 </a></li>
+                </ul>
+          </ul>
+
+
+      <h3>IBP - Chaincode development</h3>
+        <p>체인코드는 여러 언어로 작성할 수 있으며 IBM Blockchain Platform에서는 <strong>Go와 Node.js로 작성된 체인코드</strong>를 지원합니다. <br>
+            체인코드를 사용하면 Fabric 체인코드 인터페이스에서 제공하는 API를 사용하여 blockchain에 저장된 데이터를 조회하고 변경할 수 있습니다. <br>
+            블록체인의 데이터는 채널 원장의 World State로 키-값 쌍에 저장됩니다. 체인코드는 get 명령을 사용하여 값을 검색하고 put 명령을 사용하여 값을 작성하거나 업데이트합니다. <br>
+            이러한 기본 오퍼레이션을 사용하면 네트워크의 비즈니스 규칙을 정의하는 함수를 빌드할 수 있습니다.<br>
+            이러한 함수는 애플리케이션에 의해 호출되어 네트워크의 일반 사용자에게 제공될 수 있습니다. </p>
+
+
+      <h3>IBP - Visual Studio Code Extension을 사용하여 Smart contract 개발</h3>
+        <img width = 1000 src="SmartContractflow.png">
+        <ol>
+          <li>무료로 IBM Blockchain Platform VS Code Extension 설치</li>
+          <li>Node.js 혹은 Go 를 사용해 Smart Contract 프로젝트 작성</li>
+          <li>Smart Contract를 .cds 형식으로 패키지</li>
+          <li>Smart Contract를 사전에 구성된 Hyperledger Fabric 네트워크에 배치</li>
+          <li>개발 모드를 사용하여 Smart Contract 디버깅</li>
+          <li>인스턴스화된 Smart Contract 테스트</li>
+          <li>IBM Blockchain Platform 네트워크에 연결</li>
+        </ol>
+
+
+      <h3>IBP - APIs</h3>
+      <ul>
+        <li><a href="https://cloud.ibm.com/apidocs/blockchain" target="_blank"> IBM Cloud API Docs</a></li>
+      </ul>
+
+
+      <h3>IBP - Tutorial overview using IBM Cloud</h3>
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HmzBeIUjMDM" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+
+
+
+  </body>
+</html>
