@@ -19,31 +19,44 @@
     <h2>Chaincode</h2>
 
     <h3>Chaincode와 Smart Contract의 관계</h3>
-    Hyperledger Fabric users often use the terms smart contract and chaincode interchangeably.
-    In general, a smart contract defines the transaction logic that controls
-    the lifecycle of a business object contained in the world state.
-    It is then packaged into a chaincode which is then deployed to a blockchain network.
-    Think of smart contracts as governing transactions,
-    whereas chaincode governs how smart contracts are packaged for deployment.
-    Smart Contract와 Chaincode는 종종 같은 의미로 사용된다.
-    Smart Contract는 World State(데이터의 스냅샷이 저장되어 있는 데이터베이스)에 포함된
-    비즈니스 객체의 라이프사이클을 제어하는 거래 로직으로 정의된다.
-    Smart Contract는 Chaincode로 패키징되고, Chaincode는 블록체인 네트워크에 배포된다.
+    Hyperledger Fabric users often use the terms smart contract and chaincode interchangeably.<br>
+    In general, a smart contract defines the transaction logic that controls <br>
+    the lifecycle of a business object contained in the world state.<br>
+    It is then packaged into a chaincode which is then deployed to a blockchain network.<br>
+    Think of smart contracts as governing transactions,<br>
+    whereas chaincode governs how smart contracts are packaged for deployment.<br> <br>
 
-    Smart Contract는 거래를 관리하고, Chaincode는 Smart Contract가 배포되기 위해 패키징되는 것을 관리한다.
+    Smart Contract와 Chaincode는 종종 같은 의미로 사용된다.<br>
+    Smart Contract는 World State(데이터의 스냅샷이 저장되어 있는 데이터베이스)에 포함된 <br>
+    비즈니스 객체의 라이프사이클을 제어하는 거래 로직으로 정의된다.<br>
+    Smart Contract는 Chaincode로 패키징되고, Chaincode는 블록체인 네트워크에 배포된다.<br>
+    Smart Contract는 거래를 관리하고, Chaincode는 Smart Contract가 배포되기 위해 패키징되는 것을 관리한다. <br><br>
 
-    A smart contract is defined within a chaincode. Multiple smart contracts can be defined
-    within the same chaincode. When a chaincode is deployed, all smart contracts within it
-    are made available to applications.
+    A smart contract is defined within a chaincode. Multiple smart contracts can be defined <br>
+    within the same chaincode. When a chaincode is deployed, all smart contracts within it <br>
+    are made available to applications. <br><br>
 
-    Smart Contract는 Chaincode 안에 정의된다.
-    여러 Smart Contract는 같은 Chaincode 안에 정의될 수 있다.
-    Chaincode가 배포될 때, 내부의 모든 Smart Contract는 애플리케이션에서 사용할 수 있다.
+    Smart Contract는 Chaincode 안에 정의된다. <br>
+    여러 Smart Contract는 같은 Chaincode 안에 정의될 수 있다. <br>
+    Chaincode가 배포될 때, 내부의 모든 Smart Contract는 애플리케이션에서 사용할 수 있다. <br>
 
     <h3>Smart Contract can access two distinct pieces of the ledger</h3>
+    <h4>
+    Smart contracts primarily put, get and delete states in the world state, <br>
+    and can also query the immutable blockchain record of transactions.</h4>
     <ul>
-      <li>Blockchain - </li>
-      <li>World State</li>
+
+      <li>World State - put, get, delete</li>
+      <li>Blockchain - query</li>
     </ul>
+
+    <h3>Smart Contract and Endorsement</h3>
+    Endorsement 정책은 하이퍼레저 패브릭과 다른 블록체인 네트워크를 구별 짓는 특징이다.
+    거래는 네트워크의 믿을 수 있는 조직에 의해 Validation되어야 한다.
+    valid하거나 invalid한 모든 거래는 분산 원장에 저장되지만, valid한 거래만이 world state에 저장된다.
+    Endorsement 정책은 Smart Contract에 의해 발생한 거래에
+
+    <strong>어떤 조직이</strong> 승인(서명) 해야하는지 알려준다.
+
   </body>
 </html>
