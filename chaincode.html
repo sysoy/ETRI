@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hyperledger Fabric Chaincode</title>
+    <style>
+      h2 {color : #0000FF;}
+      h3 {color : #0080FF;}
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Hyperledger Fabric & IBM Blockchain Platform(IBP)</a></h1>
+    <ul>
+      <li><h2><a href="HyperledgerFabric.html">Hyperledger Fabric</a></h2></li>
+      <li><h2><a href="chaincode.html">Hyperledger Fabric Chaincode</a></h2></li>
+      <li><h2><a href="IBP.html">IBM Blockchain Platform(IBP)</a></h2></li>
+    </ul>
+
+    <h2>Chaincode</h2>
+
+    <h3>Chaincode와 Smart Contract의 관계</h3>
+    Hyperledger Fabric users often use the terms smart contract and chaincode interchangeably.
+    In general, a smart contract defines the transaction logic that controls
+    the lifecycle of a business object contained in the world state.
+    It is then packaged into a chaincode which is then deployed to a blockchain network.
+    Think of smart contracts as governing transactions,
+    whereas chaincode governs how smart contracts are packaged for deployment.
+    Smart Contract와 Chaincode는 종종 같은 의미로 사용된다.
+    Smart Contract는 World State(데이터의 스냅샷이 저장되어 있는 데이터베이스)에 포함된
+    비즈니스 객체의 라이프사이클을 제어하는 거래 로직으로 정의된다.
+    Smart Contract는 Chaincode로 패키징되고, Chaincode는 블록체인 네트워크에 배포된다.
+
+    Smart Contract는 거래를 관리하고, Chaincode는 Smart Contract가 배포되기 위해 패키징되는 것을 관리한다.
+
+    A smart contract is defined within a chaincode. Multiple smart contracts can be defined
+    within the same chaincode. When a chaincode is deployed, all smart contracts within it
+    are made available to applications.
+
+    Smart Contract는 Chaincode 안에 정의된다.
+    여러 Smart Contract는 같은 Chaincode 안에 정의될 수 있다.
+    Chaincode가 배포될 때, 내부의 모든 Smart Contract는 애플리케이션에서 사용할 수 있다.
+
+    <h3>Smart Contract can access two distinct pieces of the ledger</h3>
+    <ul>
+      <li>Blockchain - </li>
+      <li>World State</li>
+    </ul>
+  </body>
+</html>
